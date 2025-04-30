@@ -16,4 +16,35 @@ ssh -i <private-key> ec2-user@publikey(3.235.68.206)
 then it will automatically connected to the instance
 now iam inside the server  ---if we want to come out of the server command is (exit) we come out from thr server
 OS is used for intract with hardware ---
-kernal-heart of OS 
+kerna is heart and brain of OS 
+most of the companies used a linux-enterprise version
+clear===this command is used for clear the screen
+uname== command is used to find a about current user
+uname -a===command is used to find a info about user --it will print the all information
+pwd === it shows where currently your are in 
+/home/ec2-user===/home is home directory for linux and /ec2-user is user in linux
+/home/ec2-user== home directory for linux
+if we want to come back one step command is cd===change directory
+                                            cd ..===one step back
+want to find how many files and folders are present in folder
+ls --listing files and folders
+ls -l==its give long listing format
+ls -lt==sort by time, newest first
+la -ltr==reverse order while sorting
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

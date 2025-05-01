@@ -1,1 +1,69 @@
+vim editor 
+if we want to crwate a file 
+command is vim <file name>
+in vim editor we have three sections 
+esc,insert,column
+
+inside vim deitor we are useing multiple commands 
+Command mode
+---------------
+:q===this command is used for quit the file with saving the data 
+i === used for to inser the data
+:q!==this command is used for quit the file without saving the data 
+:wq!== force write and quit the data
+:wq==write and quit
+:/<word>== serach the word from top
+:?/<word>==search the word feom bottom
+:set number == it will set the numbers for file 
+:set nonumber == it will remove  the numbers for file 
+:noh===no highlight for particular number
+:22 d == it will delete the particular line 
+:%d == whole content will be deleted
+
+:3s/sbin/SBIN --> in 3rd line first occurence of sbin will be replaced with SBIN
+:3s/sbin/SBIN/g --> all occurence in that line
+:%s/sbin/SBIN/g --> all occurences in the file
+
+ESC Mode
+---------
+in the escape mode we can jsut give click u it will revert all changes
+u-->undo all changes
+yy--it will copy the line of the file 
+p--it will paste the line of the file
+dd-it will cut the line of the file 
+gg--it will take top of the file 
+shift+g--it will take down of the file
+
+Linux Administration
+----------------------
+useradd <username>====it will create a user===this user details will be stored in etc/passwd
+id <user name>===it displays user info
+
+group --> list of similar users
+devops team have 20 members
+create devops group, add team members to the group
+
+if we add user automatically uid and gid and groups will be created with same name 
+once we create user by default two groups will be created 
+1.primary group (g)
+2.secondary group (-ag)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

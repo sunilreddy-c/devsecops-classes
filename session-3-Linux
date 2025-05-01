@@ -1,1 +1,20 @@
+while we login into server , in the home directory we have (/home/ec2-user) that indicates a $ ==$ means it is normal user
+                                                                                     sudo su #== # means it is admin user or root/super user
+                                                                                     sudo su - == (/root/ec2-user) root user home directory
+for commands we have "options and inputs"
+few commands need inputs
+/ ==== is a root diretory in linux it will contain the all folders inside
+cd===> if you are in the anywhere by using cd command it will come to home directory
+cd /===> it will go to home directory
+
+ls -l --> long listing format in alphabetical order
+ls -lr --> long listing format in reverse alphabetical order
+ls -lt --> latest files on top
+ls -ltr --> latest at bottom
+ls -la --> all files including hidden files and folders
+
+touch <file-name> creates empty file
+
+
+
 

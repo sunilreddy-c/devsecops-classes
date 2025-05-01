@@ -14,6 +14,65 @@ ls -ltr --> latest at bottom
 ls -la --> all files including hidden files and folders
 
 touch <file-name> creates empty file
+cat > <file-name> --> type text, enter and ctrl+d=== it will add the content to the file
+cat > <file-name> --> type text, enter and ctrl+d==if we add another line it will override the previous data
+cat >> <file-name> --> appends text to previous content== this command is used append the data to previous content
+
+mkdir <name> --> creates directory
+rmdir --> remove empty directory
+rm -f --> forcefully removes file
+rm -rf --> recursively forcefully delete the files and folders inside too
+
+cp <source> <destination> --> copy files/folders
+mv <source> <destination> --> cut and paste
+
+if we wnat to download any file we have command called 
+wget url====it will download the content inside that url
+wget <URL> --> downloads the file---->it will download the url 
+curl <URL> --> shows on the screen---->it will display content on the screen
+
+cat <file-name> | grep <word-to-search>------> it will get the output from particular file what ever the word we want
+grep <word-to-search> <file>-------> 
+
+cut command ====this command is used for find any particular word in URL 
+https://raw.githubusercontent.com/daws-84s/notes/refs/heads/main/session-03.txt------if we we need to get only a last word 
+command is ==echo https://raw.githubusercontent.com/daws-84s/notes/refs/heads/main/session-03.txt | cut -d "/" -f1
+it will print the first position of the url
+command is ==echo https://raw.githubusercontent.com/daws-84s/notes/refs/heads/main/session-03.txt | cut -d "/" -f1,6
+it eill print the first and sixth position of the url
+
+awk command=====echo https://raw.githubusercontent.com/daws-84s/notes/refs/heads/main/session-02.txt | awk -F "/" '{print $1F}'
+
+awk -F "/" '{print $1F}'== this command will print the first fragment in url
+awk -F "/" '{print $1F,$F2}'== this command will print the first and second fragment in url
+
+Head==this command print the first 10 lines from the file (cat <file name> | head)
+Head==this command print the first 5 lines from the file (cat <file name> | head -n5)
+tail==this command print the last 10 lines from the file (cat <file name> | tail)
+tail==this command print the last 5 lines from the file (cat <file name> | tail -n5)
+tail is also used for getting log files information== tail -f <log file name>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

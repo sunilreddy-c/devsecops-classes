@@ -1,1 +1,104 @@
+permissios
+==========
+we have actually three sections in permissions 
+read---4
+write--2
+execute--1
+-       rw-              r--         r--
+file/    user/owner       group       others
+directory
+
+ec2-user ec2-user 
+group    user
+we can called a user as u 
+we can called a group as g
+we can called a others as o
+
+if we want to know in what are the permissions we have 
+ls -l <filename>
+if we want to give a write permission for specific file 
+
+command is (chmod ugo+w <filename>
+
+by using of numbers also we can change the permissions
+only owmer of the file and /root user can change the permissions of file 
+
+ownership
+==========
+
+now we can change the  ownership of the file 
+chown <user>:<group> <filename>---it will change the group 
+chowm <ownername> <filename>---it will change the owner
+
+linux used ssh servers for login 
+
+
+how can you give key based access to linux user?
+in the starting we have added one authorized key right
+that key was stored in (.ssh) folder
+ls -la == it will show that hidden folder .ssh
+inside .ssh the key will be located
+
+in system we have 65,536 ports are avaliable 
+what is port?
+in our system there is lot of services are running, for each service there is dedicated port is there
+based on that port it will work,triggers the request
+
+1. create user
+2. sivakumar can send his public key to admin user
+3. /home/sivakumar admin creates .ssh in /home/sivakumar folder
+4. sivakumar is the only owner to this folder... 700
+5. create a file called authorized_keys with max access 600
+6. admin keeps sivakumar public key here.
+7. now sivakumar should be able to login
+
+how can you give a sudo access to user 
+/etc/sudoers===we can do changes to provide access
+or add user to wheel group without password
+question in how to add user to sudo group by using command
+
+package management
+====================
+how to install apps in linux 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

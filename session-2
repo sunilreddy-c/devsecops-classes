@@ -1,7 +1,7 @@
-for creating a key in local we have a command called =====ssh-keygen -f "file-name"
+for creating a key in local we have a command called =====ssh -keygen -f "file-name"
 once we proivde a command in gitbash it will generate a key in selected folder with ===public.key file and private.key file
 that public-key i need to import to aws before that we need to signin into the account
-once we login into aws under ===security group we need to import the public key into key-pairs section
+once we login into aws under ===Network&security group we need to import the public key into key-pairs section
 and we need to create a security group as well, Once we create a firewall in under secuirty group sections 
 we need to add a public key in key-pairs section we need to select import key-pair section and give sample name and paste the content which have inside the public-key click on create 
 now we need to launch the instance 
@@ -16,7 +16,7 @@ ssh -i <private-key> ec2-user@publikey(3.235.68.206)
 then it will automatically connected to the instance
 now iam inside the server  ---if we want to come out of the server command is (exit) we come out from thr server
 OS is used for intract with hardware ---
-kerna is heart and brain of OS 
+kernal is heart and brain of OS 
 most of the companies used a linux-enterprise version
 clear===this command is used for clear the screen
 uname== command is used to find a about current user

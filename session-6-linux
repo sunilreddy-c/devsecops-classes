@@ -1,1 +1,48 @@
+process management
+==================
+ls -l --> it creates a process and assign a process ID, executes the command in kernel --> get the o/p --> display on screen
+PID == processing Instance ID
+PPID== parent proessing Iinstance ID
+PS=== comand is used to check the how many processors are in running in currently existing user
+ps -ef== this comand is used to check the how many processors are in running totally 
+
+ps -ef | grep <process name> === this command is used to check which service is running or not
+
+we have two types of processes 
+1.foreground process
+2.background process
+
+if we give command (sleep 10) the server it will go for 10 seconds sleep
+on that time commands will not execute
+ sleep 10 == it will run in the foreground process
+sleep 10 & ==it will run in the background process
+
+Kill <PID> == it will kill the processor, in some scenarios it will not stop the processor
+kill -9 <PID> == it will kill the processor forcefully
+top -p PID --> check the resources used by particular process
+htop --> human readable command
+
+Network management
+=====================
+netstat -lntp--->
+
+systemctl status <service-name>
+ps -ef | grep service-name
+netstat -lntp
+top -p PID
+
+3 tier architecture
+===================
+
+
+
+
+
+
+
+
+
+
+
+
 

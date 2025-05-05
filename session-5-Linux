@@ -59,7 +59,35 @@ question in how to add user to sudo group by using command
 
 package management
 ====================
-how to install apps in linux 
+how to install apps in linux , it is possible only for root accees
+dnf install <package name>
+dnf install git ---> it will install the git package 
+dnf remove git -y ---> it will uninstall the git package
+dnf list installed---->if we want to see alreadt intalled ones
+/etc/yum.repos.d---->by using this command we can check the configuration of installed apps
+
+service management
+===================
+systemctl start <service-name>
+systemctl stop <service-name>
+systemctl status <service-name>
+systemctl restart <service-name>
+systemctl enable <service-name>
+systemctl disable <service-name>      for http port number is :80
+                                    for https port number is :443
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -1,1 +1,102 @@
+we have our own Amazon meachine image(devops-practice)
+usdername=ec2user password=DevOps321
+this is not keybased one --this is password based one 
+
+actuall what is image
+where picture captured with some sourndings
+
+AMI == AMI is base OS
+it will created on top of redhat 9
+it will contaian pre-confihured ones like memeory+operations+packages+applications+nginx like we have ---> it will create an AMI and take it as an image
+pre-configured OS with some packages
+
+Launching AMI
+===============
+1.click on launch instance
+2.in the ddown section we have browse AMIs section we need to click on that
+3.then we need to select community AMIs
+4.search devops-practice
+5.then we can able to see (rheldevops-practice)
+6.then we need to select t3.micro
+7.then in the password section we need to selct (proceed without key-pair)
+8.it is not key-pair one , it is the one we use username and password
+9.i the security group we need to selct already existing one (allow-all)
+10.click on launch instance
+
+public ipaddress vs private ipaddress
+=====================================
+1.private-->192.168.0.5---its my system ipaddress to check this one we need to give command in command prompt like (ipconfig)
+2.public-->49.205.240.186---> it will get from online
+3.internal communication should be done using private IP
+4.if we want to connect outside of network we need to use pblic IP
+
+setuping a 3-tier architecture
+=================================
+front-end===back-end===database
+first we are going to setup frintend
+Linux - is aphysical server and nginx is a virtual server
+
+while we install ngnix the command is (dnf install ngnix -y)
+previously we are using a (yum install ngnix -y)
+the updated vesrion of yum is dnf
+in dnf we have option like we can able to see the modules means what are the latest vesrions are avaliable
+
+installing ngnix in server
+============================
+1.(dnf module list nginx ) to check what are the latest versions are avaliable
+2.before installing nginx we need to disable first (dnf module disable nginx -y)
+3.again we emable this nginx(dnf module enable nginx:1.24 -y)
+4.then we are going to instll(dnf install nginx -y)
+5.once its installed we need to start the nginx
+6.systemctl start nginx
+7.once its installed we need to check its running or not
+8.systemctl status nginx
+9.for checking process for nginx (ps-ef | grep nginx)
+10.checking port of nginx (netstat -lntp)
+11.if we want to check nginx properly installed or not in server we can take ipaddress and check in browser it will show content then it will installed
+12.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

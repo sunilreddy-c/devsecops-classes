@@ -54,7 +54,68 @@ installing ngnix in server
 9.for checking process for nginx (ps-ef | grep nginx)
 10.checking port of nginx (netstat -lntp)
 11.if we want to check nginx properly installed or not in server we can take ipaddress and check in browser it will show content then it will installed
-12.
+
+I want to do some changes config changes in nginx
+===================================================
+1.for that we need to check in cd/etc/nginx----all the config files are present in this folder
+2.inside this we have nginx.conf we have actually 
+3.if we want to open the that nginx.conf folfder
+4. command is ======vin nginx.conf
+4.it will display the content
+5.all the port details and login details are avaliable here 
+6.interview question === how you can change the port number in nginx
+7.cd/etc/nginx===> inside that we have nginx.conf folder there we have option to change the port number
+8.once the port number is changes we can restart the server
+9. if we want to change the content in for displaying while we login to nginx server 
+10.command is (/usr/share/nginx/html) 
+11.before that we can take a server IP of that we can check in browser that will display a exitising content
+12.we have chance to replace it by edting this file (/usr/share/nginx/html) inside this we have index.html what ever the content have in index.html it will show that content
+13.i want to delete the default content which present in (/usr/share/nginx/html) folder
+14.rm-rf *===it will delete the whole content which present in the inside the files  (/usr/share/nginx/html)
+15.i should install our application inside that folder 
+
+==by using of this url (curl -o /tmp/frontend.zip https://roboshop-artifacts.s3.amazonaws.com/frontend-v3.zip)--we can store that content in tmp directory
+==we can check in /tmp directory frontend.zip file will be created in tmp directory
+==we need to extract the content which is present in inside 
+==(cd /usr/share/nginx/html) in this folder we are going to unzip the folder
+==once the unzip the folder, we need to change the content in nginx.conf folder
+==(vim /etc/nginx/nginx.conf)== check into folder
+==if we want to delete the whole content in folder we can use command called (%d)==it will delete the content
+==once the changes is done we need to restart the application
+==once we restart the content will be changed
+
+== we are trying to login the nginx page by using port number right 
+==we dont want to give consumer the port number 
+==we need to give DNS means with name like (devops.com or giving.com) like that
+==for DNS  purchasing 
+==(godaddy) is costly === 
+==cheapestone (hostiner) is cheap
+==
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

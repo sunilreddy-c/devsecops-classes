@@ -17,3 +17,125 @@ TXT --> domain verification
 NS --> Nameservers
 AAAA -> Ipv6
 
+mobaxterm
+sudo set-prompt frontend---to set name for ipaddress
+
+Commands
+==============
+command for dizbale the module === dnf module disable nginx -y
+command for enable the module ==== dnf module enable nginx:1.24 -y
+command for install nginx server ==== dnf module install nginx-y
+command for enable the nginx==  systemctl enable nginx 
+command for start nginx == systemctl start nginx
+command for check status of nginx == 
+command for all the servers info ====ps -ef
+command for to get particular server info == ps -ef | grep nginx
+
+to remove default content in /usr/share/nginx/html/* 
+command is === (rm -rf /usr/share/nginx/html/*)
+then we need to download to content to temp directory
+command is ===curl -o /tmp/frontend.zip https://roboshop-artifacts.s3.amazonaws.com/frontend-v3.zip
+then we need to unzip that file in nginx home directory
+command is ==== cd /usr/share/nginx/html 
+                 unzip /tmp/frontend.zip
+
+and we need to delete the default config in which present in (/etc/nginx/nginx.conf) in this location
+and add the content which are provided by developer
+ and we need to restart the server
+systemctl restart nginx
+
+repos are present in
+/etc/yum.repos.d=== in this location repos will be presented
+
+installing mongoDB
+=====================
+first we need to check the file are present are not in this folder=== (/etc/yum.repos.d)
+if files are not present in the folder we need to create == ( vim /etc/yum.repos.d/mongo.repo)
+then we can insert this data into above file
+[mongodb-org-7.0]
+name=MongoDB Repository
+baseurl=https://repo.mongodb.org/yum/redhat/9/mongodb-org/7.0/x86_64/
+enabled=1
+gpgcheck=0
+
+then we need to install mongodb 
+command is === (dnf install mongodb-org -y)
+
+Start & Enable MongoDB Service
+=================================
+systemctl enable mongod
+systemctl start mongod 
+
+to check port command is netstat -lntp
+
+Usually MongoDB opens the port only to localhost(127.0.0.1), meaning this service can be accessed by the application that is hosted on this server only. However, we need to access this service to be accessed by another server, So we need to change the config accordingly.
+
+Update listen address from 127.0.0.1 to 0.0.0.0 in /etc/mongod.conf
+
+You can edit file by using vim /etc/mongod.conf
+
+Restart the service to make the changes effected.
+
+systemctl restart mongod
+
+
+installing nodeJS
+==================
+Install NodeJS, By default NodeJS 16 is available, We would like to enable 20 version and install list.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

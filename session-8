@@ -1,1 +1,19 @@
+what is nginx conf===/etc/nginx/nginx.conf
+root directory of nginx==/usr/shares/nginx/html--here the whole content will be present
+
+How DNS works
+google.com --> browser cache --> OS --> OS Cache --> ISP DNS resolver --> root servers --> TLD info --> .com TLD --> name servers --> A record
+name servers --> who are managing that domain now
+domain registar --> a mediator to sell the domain, they have default name servers
+
+create hosted zone in AWS, get the NS records and update in domain provider
+TTL --> time to live is DNS cache before issuing next DNS request
+
+below one all are certificates
+A --> IpV4
+CNAME --> points to another domain
+MX --> mail records
+TXT --> domain verification
+NS --> Nameservers
+AAAA -> Ipv6
 

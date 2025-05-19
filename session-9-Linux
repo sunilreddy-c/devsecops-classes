@@ -1,1 +1,129 @@
+build file for node.js == package.json
+for instal npm packages == npm install
+where we can cretae systemctl packages == 
+
+I have created 3 instances we need to install one mysql in mysql linux server 
+
+MySQL
+=======
+table and column database --> RDBMS
+
+Linux Server --> MySQL server
+
+House --> Linux Server
+Room --> DB server
+Rac --> Schema --> tables
+1DB server may have 1 or many
+transactions, users, 
+
+installation mysql
+======================
+1.for installing mysql in linuxserver command is == dnf install mysql-server -y
+2.need to enable the server == systemctl enable mysqld
+3.start mysql ==systemctl start mysqld
+4.check whether the application is running or not == netstat -lntp
+5.Next, We need to change the default root password in order to start using the database service. Use password ExpenseApp@1 or any other as per your choice.
+
+command is =====mysql_secure_installation --set-root-pass ExpenseApp@1
+Verification
+=============
+We can check data by using client package called mysql.
+
+Usually command to connect mysql server is
+
+mysql -h <host-address> -u root -p<password>
+But if your client and server both are in a single server, you can simply issue.
+
+mysql
+Once you got mysql prompt, you can use below command to check schemas/databases exist.
+
+show databases;
+Once you are in particular schema, you can get the list of tables.
+
+show tables;
+You can get entries of a table using
+select * from <table_name>;
+
+Backend nodejs installation
+===========================
+1. in backend we are going to install node.js on developer demand
+2.Backend service is responsible for adding the given values to database. Backend service is written in NodeJS, Hence we need to install NodeJS.
+3.Developer has chosen NodeJs, Check with developer which version of NodeJS is needed. Developer has set a context that it can work with NodeJS >20
+Install NodeJS, By default NodeJS 16 is available, We would like to enable 20 version and install this.
+4.Need to disble the all the versions == dnf module disable nodejs -y
+5.after that need to enable the 20th version == dnf module enable nodejs:20 -y
+6.we need to install the  nodejs after enableing == dnf install nodejs -y
+7.going to create system user for running the nodejs app, because non-human are going to run the application
+that the reason we are going to create a system user
+8.Configure the application.
+Add application User
+useradd --system --home /app --shell /sbin/nologin --comment "expense user" expense
+9.User expense is a function / daemon user to run the application. Apart from that we don't use this user to login to server.
+Also, username expense has been picked because it more suits to our project name.
+We keep application in one standard location. This is a usual practice that runs in the organization.
+10.Lets setup an app directory.
+mkdir /app
+Download the application code to created app directory.
+11.curl -o /tmp/backend.zip https://expense-builds.s3.us-east-1.amazonaws.com/expense-backend-v2.zip
+12.cd /app
+13.unzip /tmp/backend.zip
+Every application is developed by development team will have some common softwares that they use as libraries. This application also have the same way of defined dependencies in the application configuration.
+Lets download the dependencies.
+14.cd /app
+15.npm install
+
+We need to setup a new service in systemd so systemctl can manage this service
+==================================================================================
+Setup SystemD Expense Backend Service
+1.vim /etc/systemd/system/backend.service
+once file is open we need to add below content 
+[Unit]
+Description = Backend Service
+
+[Service]
+User=expense
+Environment=DB_HOST="<MYSQL-SERVER-IPADDRESS>"
+ExecStart=/bin/node /app/index.js
+SyslogIdentifier=backend
+
+[Install]
+WantedBy=multi-user.target
+
+NOTE: Ensure you replace with IP address
+
+Load the service.
+1.systemctl daemon-reload
+Start the service.
+2.systemctl start backend
+systemctl enable backend
+For this application to work fully functional we need to load schema to the Database.
+
+We need to load the schema. To load schema we need to install mysql client.
+To have it installed we can use
+3.dnf install mysql -y
+Load Schema
+4.mysql -h <MYSQL-SERVER-IPADDRESS> -uroot -pExpenseApp@1 < /app/schema/backend.sql
+Restart the service.
+5.systemctl restart backend
+
+if we want to check the connection of port telnet ipaddress or domain name 3306 portname(telnet mysql.sunilreddyc.site 3306)
+
+telnet mysql.daws84s.site 3306 --> checks whether mysql is allowing connections to it on port 3306
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

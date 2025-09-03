@@ -18,6 +18,9 @@ if we want to know in what are the permissions we have
 ls -l <filename>
 if we want to give a write permission for specific file 
 
+/etc/ssh/sshd_config
+
+
 command is (chmod ugo+w <filename>
 
 by using of numbers also we can change the permissions
@@ -65,6 +68,9 @@ dnf install git ---> it will install the git package
 dnf remove git -y ---> it will uninstall the git package
 dnf list installed---->if we want to see alreadt intalled ones
 /etc/yum.repos.d---->by using this command we can check the configuration of installed apps
+it will present in ---> /etc/yum.repos.d
+if we want to check already installed apps --->dnf list installed
+
 
 service management
 ===================

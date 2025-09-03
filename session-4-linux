@@ -46,7 +46,9 @@ create devops group, add team members to the group
 if we add user automatically uid and gid and groups will be created with same name 
 once we create user by default two groups will be created 
 1.primary group (g)
-2.secondary group (-ag)
+2.secondary group (-aG)
+command for primary group add --->usermod -g devops suresh
+command for secondary groupadd ---->usermod -aG testers suresh
 
 if we want to delete the group 
 groupdel <group name>

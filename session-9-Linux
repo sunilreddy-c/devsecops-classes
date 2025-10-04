@@ -109,6 +109,10 @@ Restart the service.
 if we want to check the connection of port telnet ipaddress or domain name 3306 portname(telnet mysql.sunilreddyc.site 3306)
 
 telnet mysql.daws84s.site 3306 --> checks whether mysql is allowing connections to it on port 3306
+netstat -lntp --> check the current port number
+nslookup mysql.sunilreddyc.site to check the domain name upadted or not in the S53 route section
+
+
 
 
 

@@ -1,1 +1,22 @@
+netstat -lntp ---> to check the port number
+nslookup --> this command is used for to check backend connection
+telnet catalogue.sunilreddyc.site 8080 ---> it is used for to check backend connection
+/var/log/nginx/access.log---> to check logs 
+
+/var/log/messages
+
+HD(ROM) --> RAM --> Apps
+
+App --> DB
+
+Send a connection req to DB
+Connection establish
+Run a query against DB
+DB should fetch the data from HD
+Send response to app
+Close the connection
+
+App --> Cache
+App --> Cache --> DB --> Cache
+
 

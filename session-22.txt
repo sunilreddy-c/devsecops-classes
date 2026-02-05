@@ -1,1 +1,9 @@
+we can call shell script by two ways --- ./==one way and filename.sh
+this is the below command sued to connect from one server to another server ansible is connect to other server or not
+ansible all -i 172.31.21.158, -e ansible_user=ec2-user -e ansible_password=DevOps321 -m ping
+ansible is developed by using python
+this is the below command to install the nginx
+ ansible all -i 172.31.21.158, -e ansible_user=ec2-user -e ansible_password=DevOps321 -b -m dnf -a "name=nginx state=installed"
+this is the below command to start the nginx
+ ansible all -i 172.31.21.158, -e ansible_user=ec2-user -e ansible_password=DevOps321 -b -m service -a "name=nginx state=started"
 
